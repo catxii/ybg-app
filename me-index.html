@@ -1,0 +1,74 @@
+<!-- 顶部标题 -->
+<header class="bar bar-nav default-style">
+    <!-- <a class="icon icon-left pull-left" href="saler-me-index.html" data-transition="slide-out"></a> -->
+    <a class="icon icon-menu pull-right" ng-click="more_option()"></a>
+    <h1 class="title">我的个人中心</h1>
+</header>
+<!-- 底部导航栏 -->
+<nav class="bar bar-tab ">
+    <a class="tab-item" href="#/order/index?type=TB">
+        <span class="ybg-icon">&#xe60d;</span>
+        <span class="tab-label">材料</span>
+    </a>
+    <a class="tab-item " href="#/site/index">
+        <span class="ybg-icon">&#xe60c;</span>
+        <span class="tab-label">工地</span>
+    </a>
+    <a class="tab-item " href="#/shop/index">
+        <span class="ybg-icon">&#xe609;</span>
+        <span class="tab-label">购物车</span>
+    </a>
+    <a class="tab-item current" href="#/me/index">
+        <span class="ybg-icon">&#xe60b;</span>
+        <span class="tab-label">我的</span>
+    </a>
+</nav>
+<!-- 页面内容区域 -->
+<div class="content" style="top: 2.2rem;">
+    <style type="text/css">
+    .content {
+        bottom: 2.2rem!important;
+    }
+    
+    .bar-tab {
+        display: block;
+    }
+    </style>
+    <div class="list-block media-list">
+        <ul>
+            <li>
+                <div class="item-content">
+                    <div class="item-media">
+                        <img  src="img/user-ico_03.png" style='width: 3rem;'>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                        <div class="item-title profiles-user-name">云包公</div>
+                        </div>
+                        <div class="item-subtitle" style="margin-top:0.25rem">
+                            13567676565
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="list-block  profiles-list">
+        <ul>
+            <li class="item-content item-link">
+                <div class="item-media"><i class="icon icon-user-ico note-ico"></i></div>
+                <a href="#/order/wait-send?type=TB" data-transition="slide-in" class="item-inner">
+                    <div class="item-title">我的运单</div>
+                </a>
+            </li>
+
+            <li class="item-content item-link">
+                <div class="item-media"><i class="icon icon-user-ico service-phone-ico"></i></div>
+                <a href="tel:073188033822" data-transition="slide-in" class="item-inner" style="background: none;">
+                    <div class="item-title">客服电话</div>
+                    <div class="item-after phone" href="tel:{{me.mcs_phone}}">{{me.mcs_phone}}</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

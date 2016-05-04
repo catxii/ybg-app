@@ -1,0 +1,1530 @@
+/*云包公公共样式*/
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "iconfont-sm";
+    src: url('../libs/sui/fonts/ratchicons.eot');
+    src: url('../libs/sui/fonts/ratchicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../libs/sui/fonts/ratchicons.woff') format('woff'), /* chrome、firefox */
+    url('../libs/sui/fonts/ratchicons.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../libs/sui/fonts/ratchicons.svg#iconfont') format('svg');
+    /* IE9*/
+    /* iOS 4.1- */
+}
+
+//图片路径配置
+@imgsrc: "../img";
+// 颜色参数-功能性划分
+@background-content-color: #f3f4f6; //背景内容区域颜色
+@yellow-color: #fcd13c; //黄色强调背景色
+@default-color: #ff2e2f; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
+@default-dark-color: #ff2e2f; //通用主色加深，可用不限于按钮点击时。
+@opposite-dark-color: #fff; //反差深色的背景的浅色字体类用色
+@gray-tint-color: #efefef; //浅灰色
+@danger-color: #fc2a2a; //危险操作，警告文字
+@warning-color: #fc923c; //强调文字颜色
+@warning-bg: #fc923c; //强调区域背景色
+@success-color: @green; //成功的颜色
+@information-color: #197fee; //文字链接颜色
+@unimportance-color: #afafaf; //次要的文字颜色
+@gray-empty: #ccc; //没有内容时候的提示背景灰色
+// 颜色种类划分
+@black: #2b2c33;
+@white: #fff;
+@gray: #efefef; //灰色背景底色
+@red: #ff0000;
+@orange: #fa6a32;
+@pink-orange: #d5b246;
+@blue: #3b7ffd;
+@pink-blue: #61af62;
+@green: #309831;
+@pink-green: #61af62;
+@yellow-color: #ffcd00;
+a {
+    color: @blue;
+}
+
+.default-color {
+    //通用主色字体用色
+    color: @default-color;
+    &:visited {
+        color: @default-color;
+    }
+}
+
+.black-color {
+    color: @black;
+    &:visited {
+        color: @black;
+    }
+}
+
+.success-color {
+    color: @success-color;
+}
+
+.danger-color {
+    //危险操作字体用色
+    color: @danger-color;
+    &:visited {
+        color: @danger-color;
+    }
+}
+
+.warning-color {
+    //强调字体用色
+    color: @warning-color;
+    &:visited {
+        color: @warning-color;
+    }
+}
+
+.unimportance-color {
+    //次要字体用色
+    color: @unimportance-color;
+    &:visited {
+        color: @unimportance-color;
+    }
+}
+
+.yellow-color {
+    color: @yellow-color;
+}
+
+.price {
+    //商品现价统一颜色
+    color: #e84c3d!important;
+}
+
+.bg-ball {
+    //圆形背景，主要用于图标圆背景框
+    background: @green;
+    color: @white;
+    border-radius: 1rem;
+    padding: 0.1rem;
+    font-size: 0.6rem;
+    &.green-bg {
+        background: @green;
+    }
+}
+
+.green-bg-ico {
+    font-size: 12px;
+    background: #6ab948;
+    color: white;
+    border-radius: .2rem;
+    padding: 0rem .1rem;
+    margin: 0 .3rem;
+}
+
+.green-ball-ico {
+    background: #85dc61;
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 1.5rem;
+    display: inline-block;
+    border-radius: .2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: .2rem;
+}
+
+//背景色定义
+.white-bg {
+    background-color: @white!important;
+    color: @black!important;
+}
+
+.gray-bg {
+    background: #efefef!important;
+}
+
+.black-bg {
+    background: @black!important;
+    opacity: .8;
+    color: @white;
+}
+
+//字体尺寸定义
+@font-size-large: .9rem; //特大尺寸（页面标题）
+@font-size-biger: .85rem; //加大尺寸（头部的文字按钮、个人中心姓名、）
+@font-size-big: .8rem; //大尺寸 （文章标题、列表头部文字）
+@font-size-default: .75rem; //标准尺寸（文本、阅读性文字、列表内容的文字）
+@font-size-small: .7rem; //小尺寸 （注释文字 、说明文字）
+@font-size-mini: .6rem; //迷你尺寸 （）
+//字体样式
+.font-shadow {
+    text-shadow: 1px 1px 0 #333;
+}
+
+//公共区域文字定义
+.title {
+    //页面标题
+    font-size: @font-size-large;
+}
+
+.fix-top-header {
+    select {
+        font-size: @font-size-large;
+    }
+}
+
+.list-block {
+    .item-subtitle {
+        font-size: @font-size-small;
+    }
+    a {
+        color: #333;
+    }
+}
+
+.card-header {
+    font-size: @font-size-big;
+}
+
+.profiles-list {
+    font-size: @font-size-big;
+    .unread-message {
+        color: #fff;
+        background: red;
+        border-radius: 2rem;
+        font-size: .6rem;
+        padding: 0 .3rem;
+        font-weight: 700;
+    }
+}
+
+.list-block,
+.list-block input[type="text"],
+.list-block input[type="password"],
+.list-block input[type="search"],
+.list-block input[type="email"],
+.list-block input[type="tel"],
+.list-block input[type="url"],
+.list-block input[type="date"],
+.list-block input[type="datetime-local"],
+.list-block input[type="time"],
+.list-block input[type="number"],
+.list-block select,
+.list-block textarea {
+    font-size: @font-size-big;
+}
+
+
+/*公共区域-内容content区域*/
+
+.content {
+    background: @background-content-color;
+}
+
+
+/*公共区域-顶部导航*/
+
+.bar-nav {
+    &.default-style {
+        background: @default-color;
+        .title {
+            color: @opposite-dark-color;
+        }
+        .icon {
+            color: @opposite-dark-color;
+        }
+        .pull-left {
+            color: @opposite-dark-color;
+            margin-left: -.5rem;
+            padding: .5rem 1rem .5rem .6rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.icon-dingwei {
+                background-image: url("@{imgsrc}/dingwei-ico_03.png");
+                background-size: 50%;
+            }
+        }
+        .button-link {
+            color: @opposite-dark-color;
+            padding: 0 .5rem;
+            margin-right: -.5rem;
+            border-radius: 0;
+            &:active {
+                border: none;
+            }
+        }
+    }
+}
+
+
+/*图标定义*/
+
+.bar-tab {
+    //底部按钮图标样式
+    .tab-item {
+        .icon {
+            display: block;
+            margin: 0 auto;
+            background-size: 100%;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-repeat: no-repeat;
+            &.tab-icon-talk {
+                background-image: url("@{imgsrc}/tab-icon-talk.png");
+            }
+            &.tab-icon-money {
+                background-image: url("@{imgsrc}/tab-icon-money.png");
+            }
+            &.tab-icon-grade {
+                background-image: url("@{imgsrc}/tab-icon-grade.png");
+            }
+            &.tab-icon-user {
+                background-image: url("@{imgsrc}/tab-icon-user.png");
+            }
+        }
+        &.current {
+            .icon {
+                &.tab-icon-talk {
+                    background-image: url("@{imgsrc}/tab-icon-talk-in.png");
+                }
+                &.tab-icon-money {
+                    background-image: url("@{imgsrc}/tab-icon-money-in.png");
+                }
+                &.tab-icon-grade {
+                    background-image: url("@{imgsrc}/tab-icon-grade-in.png");
+                }
+                &.tab-icon-user {
+                    background-image: url("@{imgsrc}/tab-icon-user-in.png");
+                }
+            }
+        }
+    }
+}
+
+// 列表菜单的图标
+i.icon {
+    width: 1.45rem;
+    height: 1.45rem;
+    background-size: 100%;
+    border-radius: .2rem;
+    vertical-align: middle;
+    &.icon-diy-money {
+        background-image: url("@{imgsrc}/me-ico_03.png");
+    }
+    &.icon-diy-lock {
+        background-image: url("@{imgsrc}/me-ico_07.png");
+    }
+    &.icon-diy-search {
+        background-image: url("@{imgsrc}/me-ico_11.png");
+    }
+    &.icon-diy-people {
+        background-image: url("@{imgsrc}/me-ico_13.png");
+    }
+    &.icon-laba {
+        background-image: url("@{imgsrc}/address-list-index-ico_01.png");
+    }
+    &.icon-car {
+        background-image: url("@{imgsrc}/address-list-index-ico_02.png");
+    }
+    &.voice-ico {
+        background-image: url("@{imgsrc}/address_ico_17.jpg");
+        background-position: top center;
+        width: 1rem;
+        height: 1rem;
+        margin-top: -.08rem;
+        border-radius: 0;
+    }
+    &.icon-qiye {
+        background-image: url("@{imgsrc}/my-site-view_03.jpg");
+        width: .8rem;
+        height: .8rem;
+        vertical-align: middle;
+    }
+    &.ico-weixin {
+        background-image: url("@{imgsrc}/pay-ico.gif");
+        background-position: top center;
+        margin-right: .25rem;
+    }
+    &.ico-zfb {
+        background-image: url("@{imgsrc}/pay-ico.gif");
+        background-position: 0px -52px;
+        margin-right: .25rem;
+    }
+    &.ico-hdfk {
+        background-image: url("@{imgsrc}/pay-ico.gif");
+        background-position: bottom center;
+        margin-right: .25rem;
+    }
+    &.icon-pay-zfb {
+        background:url("@{imgsrc}/pay-ico-zfb.png");
+        background-size: 100%;
+    }
+    &.icon-pay-yb {
+        background:url("@{imgsrc}/pay-ico-yb.png");
+        background-size: 100%;
+    }
+    &.icon-pay-wx {
+        background:url("@{imgsrc}/pay-ico-wx.png");
+        background-size: 100%;
+    }
+    &.icon-qiye-v1 {
+        background-image: url("@{imgsrc}/account-ico_06.png");
+        width: 1.4rem;
+        height: 1.4rem;
+        vertical-align: middle;
+        &.small {
+            width: .7rem;
+            height: .7rem;
+            border-radius: 0;
+        }
+        &.finish {
+            background-image: url("@{imgsrc}/account-ico_06_finish.png");
+        }
+    }
+    &.icon-geren-v1 {
+        background-image: url("@{imgsrc}/account-ico_03.png");
+        width: 1.4rem;
+        height: 1.4rem;
+        vertical-align: middle;
+        &.small {
+            width: .7rem;
+            height: .7rem;
+            border-radius: 0;
+        }
+    }
+    &.icon-user-ico {
+        background-size: 1.45rem!important;
+        &.box-ico {
+            background:url("@{imgsrc}/ico-me_box.gif") no-repeat;
+        }
+        &.money-ico {
+            background:url("@{imgsrc}/profile-money-ico.png") no-repeat;
+        }
+        &.car-ico {
+            background:url("@{imgsrc}/profile-car-ico.png") no-repeat;
+        }
+        &.bag-ico {
+            background:url("@{imgsrc}/profile-bag-ico.png") no-repeat;
+        }
+        &.title-ico {
+            background:url("@{imgsrc}/ico-me_title.gif") no-repeat;
+        }
+        &.question-ico {
+            background:url("@{imgsrc}/ico-me_question.gif") no-repeat;
+        }
+        &.note-ico {
+            background:url("@{imgsrc}/ico-me_note.gif") no-repeat;
+        }
+        &.pay-ico {
+            background:url("@{imgsrc}/profile-icon_06.gif") no-repeat;
+        }
+        &.service-phone-ico {
+            background:url("@{imgsrc}/ico-me_service.gif") no-repeat;
+        }
+        &.all-phone-ico {
+            background:url("@{imgsrc}/ico-me_headset.gif") no-repeat;
+        }
+        &.complaint-phone-ico {
+            background:url("@{imgsrc}/ico-me_complaint_phone.gif") no-repeat;
+        }
+        &.come-ico {
+            background: url("@{imgsrc}/profile-come-ico.png") no-repeat;
+        }
+        &.talk-ico {
+            background: url("@{imgsrc}/profile-talk-ico.png") no-repeat;
+        }
+        &.time-ico {
+            background: url("@{imgsrc}/profile-time.png") no-repeat;
+        }
+        &.human-ico {
+            background: url("@{imgsrc}/profile-human.png") no-repeat;
+        }
+        &.brand-ico {
+            background: url("@{imgsrc}/profile-brand.png") no-repeat;
+        }
+        &.password-ico {
+            background: url("@{imgsrc}/profile-password.png") no-repeat;
+        }
+        &.sex-ico {
+            background: url("@{imgsrc}/user-sex.gif") no-repeat;
+        }
+        &.date-ico {
+            background: url("@{imgsrc}/user-date.gif") no-repeat;
+        }
+        &.phone-ico {
+            background: url("@{imgsrc}/user-phone.gif") no-repeat;
+        }
+        &.shop-ico {
+            background: url("@{imgsrc}/user-shop.gif") no-repeat;
+        }
+    }
+}
+
+.profiles-list-Sudoku {
+    ul {
+        margin: 0;
+        background: white;
+        li {
+            border-right: 1px solid #efefef;
+            border-bottom: 1px solid #efefef;
+            text-align: center;
+            width: 33.333%;
+            float: left;
+            padding: .7rem 0;
+            &.last {
+                border-right: none;
+            }
+            &:active {
+                background: #f3f3f3;
+            }
+            a {
+                color: #323232;
+                display: block;
+            }
+            .module-name {
+                display: block;
+                font-size: 0.65rem;
+            }
+        }
+    }
+    .icon-user-ico {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-size: 100%;
+        background-repeat: top center;
+        &.ico-bag {
+            background-image: url("@{imgsrc}/profile-ico-bag.png");
+        }
+        &.ico-money {
+            background-image: url("@{imgsrc}/profile-ico-money.png");
+        }
+        &.ico-time {
+            background-image: url("@{imgsrc}/profile-ico-time.png");
+        }
+        &.ico-human {
+            background-image: url("@{imgsrc}/profile-ico-human.png");
+        }
+        &.ico-password {
+            background-image: url("@{imgsrc}/profile-ico-password.png");
+        }
+        &.ico-car {
+            background-image: url("@{imgsrc}/profile-ico-car.png");
+        }
+        &.ico-brand {
+            background-image: url("@{imgsrc}/profile-ico-brand.png");
+        }
+        &.ico-talk {
+            background-image: url("@{imgsrc}/profile-ico-talk.png");
+        }
+        &.ico-come {
+            background-image: url("@{imgsrc}/profile-ico-come.png");
+        }
+    }
+}
+
+.icon-middle-span {
+    //跟图标对齐的文本
+    vertical-align: middle;
+}
+
+.ico-style {
+    display: inline-block;
+    width: 1.45rem;
+    height: 1.45rem;
+    &.icon-photo {
+        background: url("@{imgsrc}/photo-ico_03.png") no-repeat;
+        background-size: 100%;
+    }
+}
+
+.check-ball-ico {
+    //radio样式
+    display: inline-block;
+    height: .7rem;
+    width: .7rem;
+    margin-right: .2rem;
+    vertical-align: middle;
+    background: url("@{imgsrc}/checkbox-ico_03.png") left top;
+    background-size: .7rem;
+    i {
+        display: none;
+    }
+    &.active {
+        background-position: bottom center;
+    }
+    &.disabled {
+        border-color: @unimportance-color;
+        i {
+            background: @unimportance-color;
+        }
+    }
+}
+
+.icon-no-bg {
+    //没有背景的图标样式，最新动态首页
+    display: inline-block;
+    background-size: 100%!important;
+    margin-right: .2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    &.card-ico {
+        background: url("@{imgsrc}/dynamic-ico_16.png") no-repeat;
+    }
+    &.warning-ico {
+        background: url("@{imgsrc}/dynamic-ico_23.png") no-repeat;
+    }
+    &.money-ico {
+        background: url("@{imgsrc}/dynamic-ico_03.png") no-repeat;
+    }
+    &.car-ico {
+        background: url("@{imgsrc}/dynamic-ico_05.png") no-repeat;
+    }
+    &.box-ico {
+        background: url("@{imgsrc}/dynamic-ico_07.png") no-repeat;
+    }
+    &.map-ico {
+        background: url("@{imgsrc}/dynamic-ico_13.png") no-repeat;
+    }
+    &.note-ico {
+        background: url("@{imgsrc}/dynamic-ico_21.png") no-repeat;
+    }
+}
+
+.warning-ico {
+    background: url("@{imgsrc}/warning-ico_03.gif") no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// 表单
+.input-text-underline {
+    border-bottom: 1px solid #ccc!important;
+    display: inline-block!important;
+    vertical-align: middle;
+    padding: 0!important;
+    &.mini {
+        width: 2rem!important;
+        line-height: 1.2rem!important;
+        height: 1.2rem!important;
+    }
+    &.center {
+        text-align: center;
+    }
+}
+
+
+/* 排版布局 */
+
+ul,
+ol {
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+
+.button-nav-ico {}
+
+.list-block-h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: @border-gray;
+    padding: .5rem;
+    margin: 0;
+}
+
+.inline-block-ul {
+    letter-spacing: -0.15rem;
+    word-spacing: -0.15rem;
+    padding-left: 0;
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+}
+
+.list-block {
+    margin: 0.3rem 0;
+    li {
+        border-bottom: @border-gray;
+        .item-inner:after {
+            display: none;
+        }
+    }
+    &.nomargin-list-block {
+        //清理掉列表的边距
+        margin: 0;
+    }
+    &.no-fix-width {
+        //去掉列表内容固定宽度
+        .item-title {
+            width: auto;
+        }
+    }
+    &.no-border {
+        border: none;
+        ul:before,
+        ul:after {
+            display: none;
+        }
+        li {
+            border: none;
+            min-height: 1.6rem;
+            color: #9d9d9d;
+            .item-inner {
+                padding: 0;
+                min-height: 1.6rem;
+            }
+            .name {
+                display: inline-block;
+                vertical-align: middle;
+                width: 100px;
+                text-align: right;
+                font-size: @font-size-small;
+            }
+            .value {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: @font-size-small;
+            }
+        }
+    }
+    .item-after {
+        &.small {
+            font-size: 60%;
+        }
+        &.default-color {
+            color: @default-color!important;
+        }
+    }
+}
+
+.list-font-info {
+    //订单信息类字体大小和黑色字体
+    color: @black;
+    font-size: @font-size-small;
+}
+
+.font-overflow {
+    //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.fix-center-middle {
+    //绝对定位垂直水平居中，兼容IE9以上
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3D(-50%, -50%, 0);
+    -ms-transform: translate3D(-50%, -50%, 0);
+    -o-transform: translate3D(-50%, -50%, 0);
+    transform: translate3D(-50%, -50%, 0);
+    &.fixed {
+        //追加固定定位
+        position: fixed;
+    }
+}
+
+.fix-middle {
+    //绝对定位垂直水平居中，兼容IE9以上
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3D(0%, -50%, 0);
+    -ms-transform: translate3D(0%, -50%, 0);
+    -o-transform: translate3D(0%, -50%, 0);
+    transform: translate3D(0%, -50%, 0);
+    &.fixed {
+        //追加固定定位
+        position: fixed;
+    }
+}
+
+.fix-middle {
+    //绝对定位垂直水平居中，兼容IE9以上
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3D(0%, -50%, 0);
+    -ms-transform: translate3D(0%, -50%, 0);
+    -o-transform: translate3D(0%, -50%, 0);
+    transform: translate3D(0%, -50%, 0);
+    &.fixed {
+        //追加固定定位
+        position: fixed;
+    }
+}
+
+.fix-bottom-bar {
+    //底部固定栏
+    position: fixed;
+    width: 100%;
+    z-index: 16;
+    bottom: 0rem;
+    .white-bar {
+        margin: 0;
+        background: @white;
+        border-top: @border-gray-tint;
+        line-height: 2rem;
+        .button {
+            .position-right;
+            top: .45rem;
+        }
+    }
+    .absolute-all-button {
+        //底部固定，全屏按钮
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        line-height: 2.2rem;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+.fix-top-header {
+    //固定在标题栏
+    .fix-center-middle;
+    &.list-block {
+        margin: 0;
+        select {
+            color: @opposite-dark-color;
+            padding-right: 1rem;
+            position: relative;
+            z-index: 21;
+            width: auto;
+        }
+        .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: @font-size-big;
+        }
+    }
+}
+
+.fix-top-bar {
+    //顶部挨着状态栏下的固定位置
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.position-right {
+    //绝对定位到右侧
+    position: absolute;
+    right: 0.5rem;
+    z-index: 10;
+}
+
+.content-padded-large {
+    //内容区域填充加大号
+    padding: 2rem;
+}
+
+.btn-right {
+    //文字居右显示
+    text-align: right;
+}
+
+.btn-center {
+    text-align: center;
+}
+
+.padding {
+    //区域填充，可用于内容区域需要填充的地方
+    padding: .5rem;
+}
+
+.padding-plus {
+    //区域填充，可用于内容区域需要填充的地方
+    padding: 1rem;
+}
+
+.no-padding {
+    //去掉容器的填充
+    padding: 0!important;
+}
+
+.list-padding-font {
+    //列表值为纯文本的时候添加
+    padding-right: .25rem;
+}
+
+.no-padding-margin {
+    padding: 0;
+    margin: 0;
+}
+
+.full-box {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+// 边框颜色和样式
+@border-gray: 0.05rem solid #dadada; //标准下边框实线颜色
+@border-gray-dashed: 0.05rem dashed #ccc; //标准下边框虚线颜色
+@border-gray-tint: 0.05rem solid #efefef; //浅色下边框实线颜色
+@border-gray-tint-dashed: 0.05rem dashed #efefef; //浅色下边框虚线颜色
+@border-gray-dark: 0.05rem solid #a5a5a5; //深灰色下边框实线颜色
+@border-gray-dark-dashed: 0.05rem dashed #a5a5a5; //深灰色下边框虚线颜色
+@border-warning: 0.05rem solid @warning-color;
+@border-warning-dashed: 0.05rem dashed @warning-color;
+.border-gray {
+    border: 0.05rem solid #ccc;
+    &.bottom {
+        border-width: 0 0 0.05rem 0;
+    }
+    &.dashed {
+        border-style: dashed;
+    }
+    &.tint {
+        border-color: #efefef;
+    }
+}
+
+// 下拉控件
+.select-style {
+    background: url("@{imgsrc}/select-arrow.png") no-repeat 92% center;
+    background-size: .5rem;
+    select {
+        border: 1px solid #ccc;
+        border-radius: 0.3rem;
+        height: auto;
+        padding: .2rem .4rem;
+    }
+    &.disabled {
+        background: none;
+        select {
+            border: none;
+        }
+    }
+}
+
+// 数量控件
+.count-ul {
+    border: @border-gray-dark;
+    width: 5rem;
+    border-radius: 0.4rem;
+    background: @white;
+    right: 10px;
+    z-index: 2;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    margin-top: -.85rem;
+    .count-li {
+        float: left;
+        &.del,
+        &.plus {
+            width: 30%;
+            text-indent: -999px;
+            overflow: hidden;
+            line-height: 1.6rem;
+            &:active {
+                background: @gray;
+            }
+        }
+        &.del {
+            background: url("@{imgsrc}/del.png") no-repeat center;
+            background-size: 30%;
+        }
+        &.plus {
+            background: url("@{imgsrc}/plus.png") no-repeat center;
+            background-size: 30%;
+        }
+        &.name {
+            display: none;
+        }
+        &.count {
+            width: 40%;
+            input {
+                width: 100%;
+                line-height: 1.6rem;
+                border: none;
+                height: auto;
+                border-right: @border-gray-dark;
+                border-left: @border-gray-dark;
+                text-align: center;
+                padding: 0;
+            }
+        }
+    }
+}
+
+//picker控件
+.picker-modal {
+    position: fixed!important;
+}
+
+// 列表样式
+.item-content {
+    &:active {
+        background: @background-content-color;
+    }
+}
+
+//按钮
+// a {
+//     &:visited {
+//         color: #2b2c33;
+//     }
+// }
+.button {
+    line-height: 1.25rem;
+    // color: #fff;
+    // background: #0894ec;
+    // border: none;
+    &.tab-link {
+        background: none;
+    }
+    // &.button-warning {
+    //     background: #f60;
+    // }
+    // &.button-danger {
+    //     background: #f6383a;
+    // }
+    &.button-light {
+        background: white;
+        border: @border-gray-dark;
+        color: @unimportance-color;
+    }
+    &.button-big {
+        line-height: 2rem!important;
+        height: 2rem;
+    }
+    // &.disabled {
+    //     background: white;
+    //     color: #c8c9cb!important;
+    //     border:.05rem solid #c8c9cb;
+    // }
+    // &:visited {
+    //     color:#fff; 
+    // } 
+    // &:active {
+    //     color:@default-dark-color;
+    //     border:1px solid @default-dark-color;
+    // }
+    &.tab-link:visited {
+        color: #333;
+    }
+    &.disabled {
+        pointer-events: none;
+    }
+}
+
+.button-input-block {
+    width: 100%;
+}
+
+.button-default {
+    &.button-fill {
+        background: @default-color;
+    }
+}
+
+.button-yellow {
+    &.button-fill {
+        background: @yellow-color!important;
+        color: @black!important;
+    }
+}
+
+header {
+    .button-link {
+        background: none;
+        &:active {
+            background: @default-dark-color;
+        }
+    }
+    .icon-left {
+        &:active {
+            background: @default-dark-color;
+        }
+    }
+}
+
+//警惕消息提示框
+.warning-message-bar {
+    background: @warning-bg;
+    color: @warning-color;
+    position: absolute;
+    top: 2.2rem;
+    right: 0;
+    left: 0;
+    padding: .2rem;
+    text-align: center;
+    z-index: 10;
+}
+
+//搜索框
+.search-input {
+    input {
+        border-radius: 1rem;
+    }
+}
+
+.black-top-area {
+    //黑色顶部导航
+    background: @black;
+    height: auto;
+    box-shadow: 1px 1px 4px #ccc;
+    ul {
+        .inline-block-ul;
+        text-align: center;
+        margin: 0;
+        white-space: nowrap;
+        li {
+            line-height: 2.5rem;
+            a {
+                color: @white;
+                font-size: @font-size-mini;
+                padding: .2rem .3rem;
+                border-radius: 1rem;
+                position: relative;
+                &:active {
+                    color: @black;
+                }
+                i {
+                    display: block;
+                    border-radius: 2rem;
+                    background: @white;
+                    color: @default-color;
+                    width: .8rem;
+                    height: .8rem;
+                    text-align: center;
+                    line-height: .8rem;
+                    position: absolute;
+                    top: -.5rem;
+                    right: -.5rem;
+                    font-size: @font-size-mini;
+                    font-style: normal;
+                    font-weight: bolder;
+                }
+            }
+            &.current {
+                a {
+                    background: @default-color;
+                }
+            }
+        }
+        &.three-ul {
+            li {
+                width: 33%;
+            }
+        }
+        &.four-ul {
+            li {
+                width: 25%;
+            }
+        }
+        &.five-ul {
+            li {
+                width: 20%;
+            }
+        }
+    }
+    &.still-white {
+        background: @white;
+        ul {
+            li {
+                a {
+                    color: @black;
+                    i {
+                        background: @default-color;
+                        color: @white;
+                    }
+                }
+                &.current {
+                    a {
+                        background: @default-color;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup {
+    padding: 2.6rem 0 0 0;
+    .bar-nav {
+        border-bottom: @border-gray;
+    }
+    .close-btn {
+        position: absolute;
+        right: .2rem;
+        top: .3rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+        color: @red;
+        z-index: 10;
+        &:hover {
+            color: @gray;
+        }
+    }
+    .buttons-tab {
+        width: 100%;
+    }
+    .popup-content {
+        position: absolute;
+        top: 2.2rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: auto;
+    }
+}
+
+.card-ps {
+    background: white;
+    margin-bottom: .5rem;
+    border: @border-gray-tint;
+    .title-font {
+        line-height: 2.5rem;
+        border-bottom: @border-gray-tint;
+        margin: 0;
+        .blue-block-ico {
+            background: @default-color;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0 .6rem 0 .2rem;
+            height: .8rem;
+            width: .1rem;
+        }
+    }
+    .inline-block-ul {
+        text-align: center;
+        border-bottom: @border-gray-tint;
+        padding: .5rem 0;
+        margin: 0;
+        .ball-ico {
+            display: inline-block;
+            width: .6rem;
+            height: .6rem;
+            border-radius: 1rem;
+            background: @unimportance-color;
+            position: absolute;
+            top: 50%;
+            margin-top: -.3rem;
+        }
+        li {
+            position: relative;
+            vertical-align: middle;
+            &.left {
+                padding-right: 1rem;
+                .ball-ico {
+                    right: 0;
+                }
+            }
+            &.right {
+                padding-left: 1rem;
+                .ball-ico {
+                    left: 0;
+                }
+            }
+            &.complete {
+                color: @default-color;
+                .ball-ico {
+                    background: @default-color;
+                }
+            }
+            &.info {
+                height: .05rem;
+                width: 4rem;
+                background: @unimportance-color;
+                &.complete {
+                    background: @default-color;
+                }
+            }
+        }
+    }
+    .product-list {
+        padding: .5rem;
+        margin: 0;
+        li {
+            border-bottom: @border-gray-dashed;
+            padding: .2rem 0;
+            &:last-child {
+                border-bottom: none;
+            }
+            .name {}
+            .product-list {
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+.card {
+    &.no-margin {
+        margin: 0;
+    }
+}
+
+//销售端-客户主页
+.font-small-gray {
+    font-size: @font-size-mini;
+    color: @unimportance-color;
+    vertical-align: middle;
+    margin-right: 1.2rem;
+}
+
+.ps-info {
+    color: @unimportance-color;
+    font-size: @font-size-small;
+}
+
+.photo-number {
+    position: absolute;
+    right: 2rem;
+    top: .5rem;
+    &:active {
+        color: @unimportance-color;
+    }
+}
+
+.alert-ul {
+    //空白没内容区域提示区域
+    width: 50%;
+    margin: 3rem auto;
+    text-align: center;
+    background: url(../img/alert-ico.png) center top no-repeat;
+    background-size: 3rem;
+    padding-top: 7rem;
+    white-space: nowrap;
+    .btn {
+        margin-top: 1rem;
+    }
+}
+
+.finish-box {
+    //完成提示
+    text-align: center;
+    padding: .5rem 0;
+    font-size: @font-size-large;
+    font-weight: bolder;
+    .ball-bg {
+        border: .2rem solid @default-color;
+        color: @default-color;
+        font-size: 2.5rem;
+        font-weight: bolder;
+        border-radius: 10rem;
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+        line-height: 4rem;
+        margin: .5rem auto;
+    }
+}
+
+.bar-tab {
+    //当页面元素先于bar-tab，有一个包含content-no-tab的类名，bar-tab不显示
+    display: none;
+}
+
+.content {
+    bottom: 0;
+    &.content-hidden {
+        overflow-x: hidden;
+    }
+}
+
+.bar-tab ~ .content {
+    bottom: 0;
+}
+
+// 叹号图标
+.tanhao-ico {
+    background: red;
+    color: white;
+    font-style: normal;
+    text-align: center;
+    width: .8rem;
+    height: .8rem;
+    display: inline-block;
+    line-height: .8rem;
+    border-radius: 10rem;
+    font-weight: bolder;
+    padding: 0;
+    font-size: .6rem;
+    vertical-align: middle;
+    margin-right: .6rem;
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    margin-top: -.4rem;
+    opacity: .4;
+    zoom: 0;
+}
+
+// 公共状态提示页面
+.alert-status-box {
+    text-align: center;
+    padding: 3rem 1rem 0;
+    .button-list {
+        padding: 1rem 0;
+        .button {
+            width: 40%;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+    }
+    .icon {
+        font-size: 3rem;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        display: block;
+        margin: 1rem auto;
+    }
+    .right {
+        color: @success-color;
+    }
+    .warning {
+        color: @warning-color;
+    }
+    .wrong {
+        color: @danger-color;
+    }
+    .information {
+        color: @information-color;
+    }
+    .empty {
+        color: @gray-empty;
+    }
+}
+
+// 登录的删除按钮
+.clearuserinfo {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -.5rem;
+    line-height: .88rem;
+    background: #ccc;
+    border-radius: 5rem;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    color: @white;
+    padding: 0;
+    &:active {
+        background: @danger-color;
+        color: @white;
+    }
+}
+
+.tag-ico {
+    font-size: .6rem;
+    border: .05rem @default-color solid;
+    color: @default-color;
+    padding: 0 .05rem;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1rem;
+    height: 1rem;
+}
+
+.list-block .item-link .item-inner {
+    background-size: .4rem;
+}
+
+.default-list {
+    li {
+        color: #333;
+    }
+}
+
+// 删除背景
+.bg-none {
+    background-image: none!important;
+}
+
+.item-subtitle {
+    .info {
+        margin-right: .5rem;
+        color: #6d6d6d;
+        width: 50%;
+        display: inline-block;
+    }
+}
+
+.start-ul {
+    margin: .2rem;
+    background: none!important;
+    padding: 0!important;
+    li {
+        display: inline-block;
+        border: none;
+        vertical-align: middle;
+        .star-ico {
+            display: block;
+            background: url("@{imgsrc}/star-ico_05.png") no-repeat center;
+            background-size: 100%;
+        }
+        &.finsh {
+            .star-ico {
+                background-image:url("@{imgsrc}/star-ico_03.png");
+            }
+        }
+    }
+    &.large {
+        .star-ico {
+            width: .75rem;
+            height: .75rem;
+        }
+    }
+    &.default {
+        li {
+            font-size: @font-size-mini;
+        }
+        .star-ico {
+            width: .6rem;
+            height: .6rem;
+        }
+    }
+    &.small {
+        li {
+            font-size: @font-size-mini;
+        }
+        .star-ico {
+            width: .5rem;
+            height: .5rem;
+        }
+    }
+}
+
+// 温馨提示
+.tips-area {
+    font-size: @font-size-small;
+    text-align: justify;
+}
+
+// 文字在一行
+.white-space {
+    white-space: nowrap;
+}
+
+// checkbox的颜色
+label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox,
+label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox {
+    background-color: @warning-color;
+}

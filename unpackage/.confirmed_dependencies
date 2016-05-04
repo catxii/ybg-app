@@ -1,0 +1,28 @@
+{
+  "index.html": {
+    "resources": [
+      "libs/angularjs/angular.js",
+      "js/base.js",
+      "libs/sui/js/zepto.min.js",
+      "libs/iconfont/iconfont.css",
+      "js/public.js",
+      "js/driver-model.js",
+      "libs/sui/js/sm-extend.min.js",
+      "libs/sui/js/sm.min.js",
+      "js/module.js",
+      "libs/sui/css/sm.min.css",
+      "css/style-plugin.css",
+      "libs/angularjs/angular-route.js",
+      "libs/sui/css/sm-extend.min.css",
+      "img/tm-black_03.png",
+      "libs/localResizeMG/lrz.bundle.js",
+      "libs/baidumap/css/baidu_map_lib.css",
+      "js/version_refresh.js",
+      "js/min/zp-wx-app-ck.js",
+      "img/logo_06.gif",
+      "img/password-ico.png",
+      "login.html",
+      "img/username-ico.png"
+    ]
+  }
+}

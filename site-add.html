@@ -1,0 +1,51 @@
+<!-- 顶部标题 -->
+<header class="bar bar-nav default-style">
+    <a class="icon icon-left pull-left" href="#/site/index" data-transition="slide-out"></a>
+    <a href="#/site/add" data-transition="slide-in" class="button button-link pull-right">
+        保存
+        </a>
+    <h1 class="title">新增工地</h1>
+</header>
+<!-- 页面内容区域 -->
+<div class="content" style="top: 2.2rem;">
+    <div class="upload-img padding white-bg">
+        <label class="row clearfix" onclick="javascript:$.toast('上传')">
+            <div class="col-20"><span class="add-icon">+</span></div>
+            <div class="col-80"><a class="font-text">请为工地添加一张图片</a></div>
+        </label>
+    </div>
+    <div class="list-block">
+        <ul style="padding:.25rem .75rem;">
+            <li>
+                <div class="input-title">所在区域</div>
+                <div class="item-content no-padding">
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="text" placeholder="请输入街道/小区/大厦/学校名称">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="input-title">详细地址</div>
+                <div class="item-content no-padding">
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="text" placeholder="请输入楼号/栋号/单元号/门牌号 例：A区9栋5单元103">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="border:none;">
+                <label class="label-checkbox item-content" style="padding:0;">
+                    <input type="checkbox" name="my-radio">
+                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                    <div class="item-inner">
+                        <div class="item-subtitle">是否为企业工地</div>
+                    </div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="content-block-title btn-center"><span class="ybg-icon">&#xe603;</span> 请设置工地当前状态</div>
+</div>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="ybg-app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>云包公-APP</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Expires" content="Mon, 20 Jul 2018 23:00:00 GMT" />
+    <link rel="stylesheet" href="libs/sui/css/sm.min.css">
+    <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+    <link rel="stylesheet" href="libs/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/style-plugin.css">
+</head>
+
+<body>
+    <div ng-controller="global_model" class="page" ng-view>
+    </div>
+
+    <!-- 搜索订单 -->
+    <div class="popup popup-search-view">
+        <!-- 顶部标题 -->
+        <header class="bar bar-nav default-style">
+            <a class="icon icon-down pull-left " ng-click="closePopup('search-view')"></a>
+            <h1 class="title">搜索订单</h1>
+        </header>
+        <!-- 搜索栏 -->
+        <div class="bar bar-header-secondary white-bg bar-header-puls">
+            <div class="searchbar">
+                <!-- <a class="searchbar-cancel">取消</a> -->
+                <div class="search-input  btn-right">
+                    <a class="icon icon-search" for="search"></a>
+                    <input  type="search" id='search_kit' ng-model="search" placeholder='按客户地址搜索运单...' />
+                </div>
+            </div>
+        </div>
+        <div class="gray-bg popup-content" style="top:4.4rem;">
+            <div class="card" ng-repeat="order in orderlist | orderBy:'-arrival_time'">
+                <div class="card-header">
+                    <span>订单状态：<span class="danger-color">{{order.waybill_status}}</span></span>
+                    <a href="tel:{{order.customer_phone}}"><span class="icon icon-phone" ></span> 联系客户</a>
+                </div>
+                <div class="card-content">
+                    <a class="card-content-inner  arrow-bg-right list-font-info" style="display:block" ng-click="viewOrderDetail(order.waybill_id)" data-transition="slide-in">
+                    客户姓名：{{order.customer_name}}<br/>
+                    货物列表：<span ng-repeat="o in order.waybill_types">{{o}}</span>共计{{order.waybill_total_weight}}公斤<br/>
+                    订单金额：<span class="price">¥{{order.waybill_amount}}</span><br/>
+                    下单时间：{{order.create_time}}<br/>
+                    配送时间：{{order.arrival_time}}<br/>
+                    收货地址：{{order.customer_address}}
+                </a>
+                </div>
+                <ul class="card-footer card-footer-ul clearfix">
+                    <li class="pull-left">
+                        <span style="margin-right: .25rem;" class="gray-title" ng-repeat="tag in order.waybill_tags">{{tag}}</span>
+                    </li>
+                    <li class="pull-right" ng-if="order.waybill_status==='待指派'">
+                        <a ng-if="order.waybill_status_code==1" ng-click="cancelOrder(order.waybill_id,$index)" class="button button-danger ">取消订单</a>
+                        <a ng-if="order.waybill_status_code==0" class="button button-danger disabled ">取消订单</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="libs/angularjs/angular.js"></script>
+    <script type="text/javascript" src="libs/angularjs/angular-route.js"></script>
+    <script type="text/javascript" src="libs/layzr/layzr.min.js"></script>
+    <!--前端压缩图片尺寸-->
+    <script type="text/javascript" src="libs/localResizeMG/lrz.bundle.js"></script>
+    <!-- 云包公js -->
+    <script type="text/javascript" src="js/base_route.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/version_refresh.js"></script>
+    <script type="text/javascript" src="js/driver-model.js"></script>
+</body>
+
+</html>

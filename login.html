@@ -1,0 +1,32 @@
+<!-- 顶部标题 -->
+<!-- <header class="bar bar-nav default-style">
+    <a class="icon icon-left pull-left" href="#" data-transition="slide-out"></a>
+    <h1 class="title">云包公销售系统</h1>
+</header> -->
+<!-- <div class="warning-message-bar">账号或密码错误，请重新输入</div> -->
+<!-- 页面内容区域 -->
+<div class="content login-bg" style="top: 0rem;">
+    <ul class="login-list">
+        <li class="username">
+            <input type="text" name="username" placeholder="请输手机号" tabIndex="1" value='' ng-required="true" ng-model="login.mobile">
+        </li>
+        <li class="password">
+            <input type="password" name="password" class="form-control" placeholder="请输密码" tabIndex="2" value='' ng-model="login.password">
+        </li>
+        <li class="content-block" style="margin-top:1rem;">
+            <!-- <a class="button button-fill button-big button-yellow" ng-click="submit()">登 录</a> -->
+            <a href="#/me/index" class="button button-fill button-big button-yellow" >登 录</a>
+        </li>
+        <!-- <li class="content-block" style="margin-top:0;">
+            <a href="#/register" class="button button-fill button-big  button-default">注 册</a>
+        </li> -->
+        <!-- <li class="btn-center register-in-btn">
+            <a href="#/forget-password/index">忘记密码？</a>
+        </li> -->
+    </ul>
+    <a class="change_to_test" ng-class="{'current':openTest}" ng-click="change_to_test_model($event)">
+        <span>测</span>
+    </a>
+    <!-- 密码的验证提示 -->
+    <div class="footer-info">版权所有: 云包公电子商务（长沙）有限公司</div>
+</div>

@@ -1,0 +1,31 @@
+
+@font-face {font-family: "ybg-icon";
+  src: url('iconfont.eot?t=1462264723'); /* IE9*/
+  src: url('iconfont.eot?t=1462264723#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1462264723') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1462264723') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1462264723#ybg-icon') format('svg'); /* iOS 4.1- */
+}
+
+.ybg-icon {
+  font-family:"ybg-icon" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ybg-icon-roundcheck:before { content: "\e600"; }
+.ybg-icon-roundclose:before { content: "\e601"; }
+.ybg-icon-warn:before { content: "\e602"; }
+.ybg-icon-camerafill:before { content: "\e605"; }
+.ybg-icon-camera:before { content: "\e606"; }
+.ybg-icon-info:before { content: "\e603"; }
+.ybg-icon-copy:before { content: "\e607"; }
+.ybg-icon-cameraaddfill:before { content: "\e608"; }
+.ybg-icon-31gouwuche:before { content: "\e609"; }
+.ybg-icon-31shouye:before { content: "\e60a"; }
+.ybg-icon-31wode:before { content: "\e60b"; }
+.ybg-icon-31dingwei:before { content: "\e60c"; }
+.ybg-icon-31quanbushangpin:before { content: "\e60d"; }
+.ybg-icon-empty:before { content: "\e604"; }

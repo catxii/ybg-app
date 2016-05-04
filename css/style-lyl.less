@@ -1,0 +1,191 @@
+ @import url(base.less);
+ // 登陆
+ .login-bg {
+     background: white;
+ }
+ 
+ .login-list {
+     background: white url(../img/logo_06.gif) top center no-repeat;
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+     background-size: 100%;
+     margin: 0;
+     padding-top: 60%;
+     li {
+         line-height: 2.5rem;
+         margin-bottom: 0.5rem;
+         background-size: 1rem!important;
+     }
+     .username {
+         background: url("@{imgsrc}/username-ico.png") .6rem center no-repeat;
+         border-bottom: @border-gray;
+         padding-left: 2rem;
+         position: relative;
+         overflow: hidden;
+     }
+     .password {
+         background: url("@{imgsrc}/password-ico.png") .6rem center no-repeat;
+         border-bottom: @border-gray;
+         padding-left: 2rem;
+         overflow: hidden;
+     }
+     input {
+         border: none;
+         background: none;
+         font-size: @font-size-large;
+         box-shadow: none!important;
+     }
+ }
+ 
+ .change_to_test {
+     display: block;
+     width: 2rem;
+     height: 2rem;
+     position: fixed;
+     top: .5rem;
+     right: .5rem;
+     border-radius: 10rem;
+     span {
+         display: none;
+         text-align: center;
+         line-height: 2rem;
+     }
+     &.current {
+         background: #000;
+         opacity: .2;
+         span {
+             display: block;
+         }
+     }
+ }
+ 
+ .footer-info {
+     display: none;
+ }
+ 
+ .profiles-user-name {
+     font-size: @font-size-default;
+ }
+ 
+ .bar-tab {
+     .tab-item {
+         .ybg-icon {
+             display: block;
+             font-size: 1.2rem;
+             margin: 0;
+             padding: 0;
+             line-height: 1.2rem;
+             padding: .25rem 0 0;
+         }
+         .tab-label {
+             font-size: @font-size-mini;
+             display: block;
+         }
+         &.current {
+             color: @default-color;
+         }
+     }
+ }
+ 
+ // 加载列表页
+ .get-ajax-btn {
+     display: block;
+     background: #efefef;
+     color: #333;
+     line-height: 2rem;
+     margin: .25rem;
+     text-align: center;
+     box-shadow: 0 0 .1 #ccc;
+     .preloader {
+         vertical-align: middle;
+         display: none;
+         &.show {
+             display: inline-block;
+         }
+     }
+ }
+ 
+ .end-ajax-btn {
+     display: block;
+     text-align: center;
+     line-height: 2rem;
+     color: #ccc!important;
+ }
+ 
+ .overflow-box {
+     overflow: hidden;
+ }
+ 
+ // 数据为空
+ .empty-box {
+     padding: 2rem 0 4rem;
+     text-align: center;
+     opacity: .1;
+     .info {
+         color: #333;
+         font-size: 1rem;
+         display: block;
+     }
+     .icon {
+         font-size: 3rem;
+         display: inline-block;
+         margin-bottom: .25rem;
+     }
+ }
+ 
+ .clearfix {
+     display: block;
+ }
+ 
+ .buttons-tab {
+     &.oveflow {
+         width: 100%;
+         overflow: auto;
+         a {
+             font-size: @font-size-mini;
+         }
+     }
+ }
+
+ .upload-img { 
+    border-bottom:@border-gray;
+    .add-icon {
+        font-size: 3rem;
+        border:@border-gray;
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        text-align: center;
+        line-height: 1.7rem;
+        color: #dadada;
+    }
+    .font-text {
+        line-height: 2.4rem;
+        font-size: @font-size-default;
+    }
+ }
+
+.input-title {
+    font-size: @font-size-mini;
+    padding:.5rem 0rem 0;
+}
+.list-block {
+    ul {
+        &:before ,&:after {
+            display: none;
+        }
+        .item-input {
+            input[type=text] {
+                font-size: .7rem;
+                padding-left: 0;
+            }
+        }
+        .no-padding {
+            padding-left: 0;
+        }
+    }
+}
+
+.content-block-title {
+    margin: 1rem 0 .5rem;
+}
